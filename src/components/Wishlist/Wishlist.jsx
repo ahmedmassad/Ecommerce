@@ -14,17 +14,17 @@ const Wishlistt = () => {
 
     const {prodacts,deletewishlist} = useContext(Wishlist)
      const {addprodactcart} = useContext(Cartcontext)
-    return <section className="py-8 h-screen">
-    <div className="w-full md:w-[80%] bg-slate-300  mx-auto p-5 ">
+    return <section className="py-8 ">
+    <div className=" bg-gray-200 w-full md:w-[80%]    mx-auto p-5">
     {prodacts.length != 0 ? <>
       {prodacts?.map(function(item,idx){ 
         return<>
-        <div key={idx} className="flex flex-wrap  justify-center items-center border-b-2  border-blue-300">
-           <div className="w-1/6 p-5">
+        <div key={idx} className="flex flex-wrap  justify-center items-center ">
+           <div className="lg:w-1/3 p-5">
          
             <img src={item.imageCover} alt="" className="w-full"/>
            </div>
-           <div className="w-4/6 p-5">
+           <div className="lg:w-1/3 p-5">
             <h3 className="mb-3">{item.title}</h3>
               <h3  className="mb-3">{item.price}</h3>
               <button
@@ -34,10 +34,10 @@ const Wishlistt = () => {
                           focus:ring-red-500 font-medium rounded-lg text-sm px-5 py-2.5
               ">remove</button>
            </div>
-           <div className="w-1/6 p-5 flex justify-between">
+           <div className="lg:w-1/3 p-5 flex justify-between">
            <button
               onClick ={() =>{addprodactcart(item.id)}}
-              className= "absolute   text-white bg-green-500 font-medium rounded-lg text-sm px-5 py-2.5 AddtoCart ">
+              className= "text-white bg-green-500 font-medium rounded-lg text-sm px-5 py-2.5 AddtoCart ">
                 Add to Cart
               </button>
            </div>
