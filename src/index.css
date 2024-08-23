@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hero:hover{
+    box-shadow: 1px 1px 10px #4fa74f;
+    transition: all  0.2s ease;
+}
+.hero .AddtoCart{
+    left: 0;
+    right: 0;
+    bottom: -100px;
+    transition: all  0.5s ease;
+}
+.hero:hover .AddtoCart{
+   bottom: 0;
+}
